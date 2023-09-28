@@ -4,7 +4,7 @@ import { currentUser } from "@clerk/nextjs";
 
 // We are using Prisma to create/retrieve the user.
 // I've commented out the Prisma code.
-export const FAKE_USER = {
+const FAKE_USER = {
   id: 1,
   name: "John",
   email: "john@example.com",

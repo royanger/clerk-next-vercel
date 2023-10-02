@@ -19,12 +19,14 @@ export default function Page() {
       try {
         const user = await getUser();
 
+        console.log('USER TEST', !user)
+
         // User doesn't exist, creating
         if (!user) await createUser();
       } catch (error) {
         console.error(error);
       } finally {
-        router.push("/");
+        // router.push("/");
       }
     })();
   }, [clerk.isLoaded, clerk.isSignedIn]);
